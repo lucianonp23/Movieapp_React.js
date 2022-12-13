@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react';
 import MovieList from './Components/MovieList';
 import MoviesHeading from './Components/MoviesHeading';
 import SearchBox from './Components/SearchBox';
+import AddToList from './Components/AddToList';
 
 
 function App() {
@@ -13,6 +14,10 @@ const [movies,setMovies]= useState([]);
 const [SearchValue,setSearchValue]= useState('');
 
 const [favorites,SetFavorites]= useState([]);
+
+const AddToList = (movie)=> {
+ SetFavorites(movie);
+}
 
   const handleRequest = async (item)=> {
     const url=`http://www.omdbapi.com/?s=${item}&apikey=f2490978`;
@@ -38,7 +43,7 @@ const [favorites,SetFavorites]= useState([]);
         <SearchBox  setSearchValue={setSearchValue}/>
       </div>
       <div className="movies_list">
-        <MovieList movies={movies}/>
+        <MovieList movies={movies}  AddToList={AddToList}/>
       </div>
       <div className="favorites">
       <MovieList movies={favorites}/>
