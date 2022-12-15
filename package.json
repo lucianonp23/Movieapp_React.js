@@ -17,7 +17,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "postinstall": "patch-package",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
@@ -38,7 +37,6 @@
     ]
   },
   "devDependencies": {
-    
     "gh-pages": "^4.0.0"
   }
 }
