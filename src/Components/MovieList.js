@@ -12,7 +12,7 @@ const MovieList = (props) => {
                     <img src={item.Poster} alt="Poster" className="row_poster"></img>
                     <div className="image_overlay">
                         <h2>{item.Title}</h2>
-						<p> <button onClick={()=> props.manageItem(item)}>{props.favoriteComponent} </button></p>
+						<p> <button className="manageButton" onClick={()=> props.manageItem(item)}>{props.favoriteComponent} </button></p>
                         
                     </div>
                 

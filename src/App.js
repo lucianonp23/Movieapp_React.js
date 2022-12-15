@@ -7,6 +7,7 @@ import SearchBox from './Components/SearchBox';
 import AddToList from './Components/AddToList';
 import RemoveFromList from './Components/RemoveFromList';
 
+
 function App() {
 //UseStates used  
 const [movies,setMovies]= useState([]);

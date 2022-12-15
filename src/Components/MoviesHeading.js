@@ -1,7 +1,9 @@
 const MoviesHeading = (props) => {
     return ( 
-        
-            <h2>{props.heading}</h2>
+        <div className="title-ctn">
+            <h1>{props.heading}</h1>
+        </div>
+            
         
      );
 }
