@@ -47,7 +47,7 @@ useEffect(()=> {
 
 //Fetch request on API
   const handleRequest = async (item)=> {
-    const url=`http://www.omdbapi.com/?s=${item}&apikey=f2490978`;
+    const url=`https://www.omdbapi.com/?s=${item}&apikey=f2490978`;
 
     const request= await fetch(url);
     const response= await request.json();
