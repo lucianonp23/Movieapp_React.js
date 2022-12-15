@@ -57,8 +57,6 @@ useEffect(()=> {
     
   }
 
-  
-
   useEffect(()=> {
    handleRequest(SearchValue) 
   },[SearchValue]);
