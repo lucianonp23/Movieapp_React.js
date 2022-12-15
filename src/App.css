@@ -14,7 +14,9 @@ body {
   background-color: rgb(17, 17, 17);
   color: rgb(159, 0, 0);
 }
-
+h1{
+  text-shadow: 1px 1px #7c6767;
+}
 .row_posters {
   display: flex;
   overflow-y: hidden;
