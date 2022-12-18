@@ -16,6 +16,24 @@ const [SearchValue,setSearchValue]= useState('');
 
 const [favorites,SetFavorites]= useState([]);
 
+//Fetch request on API
+const handleRequest = async (item)=> {
+  const url=`https://www.omdbapi.com/?s=${item}&apikey=f2490978`;
+
+  const request= await fetch(url);
+  const response= await request.json();
+  
+  if(response.Search){
+    setMovies(response.Search)
+  };
+  
+}
+
+//Render search content
+useEffect(()=> {
+ handleRequest(SearchValue) 
+},[SearchValue]);
+
 //Functions to add/remove item from lists
 const addList = (movie)=> {
   const newFavoriteList=[...favorites,movie];
@@ -38,28 +56,16 @@ const saveOnLocalStorage = (item)=>{
 //Render localstorage data on start
 useEffect(()=> {
   const getFavorites = JSON.parse(localStorage.getItem("react-movieapp"))
-  
-  SetFavorites(getFavorites);
+  if (getFavorites){
+    SetFavorites(getFavorites)
+  }
+  ;
 },[]);
 
 
 
 
-//Fetch request on API
-  const handleRequest = async (item)=> {
-    const url=`https://www.omdbapi.com/?s=${item}&apikey=f2490978`;
 
-    const request= await fetch(url);
-    const response= await request.json();
-    
-    if(response.Search)
-    {setMovies(response.Search)}
-    
-  }
-
-  useEffect(()=> {
-   handleRequest(SearchValue) 
-  },[SearchValue]);
 
   return (
     <div className="app_movie">
