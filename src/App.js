@@ -62,11 +62,7 @@ useEffect(()=> {
   ;
 },[]);
 
-
-
-
-
-
+//App render
   return (
     <div className="app_movie">
       <div className="heading">
