@@ -1,3 +1,12 @@
+# MovieApp React.JS Project
+
+ Projeto de aplicação de importantes conceitos, baseado no desenvolvimento de uma Webpage para busca de filmes no OmdbApi. 
+Mecanismo de pesquisa utilizando State/Effect hooks com consumo de API, exibição dos resultados em formato de posters em “carrousel” e botões adicionar/remover filme da seção favoritos, utilizando localstorage do navegador para armazenar escolhas.
+
+![movieApp-page-screenshot](https://user-images.githubusercontent.com/109590558/208415832-537f3220-53af-4d1d-a823-f13f60707dfb.JPG)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
